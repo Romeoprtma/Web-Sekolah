@@ -29,14 +29,26 @@
     </div> --}}
 
     <section class="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div class="bg-cyan-100 flex rounded-2xl shadow-lg max-w-3xl">
-        <div class="w-1/2 p-5">
+
+      <div class="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
+        <div class="w-1/2 ">
             <img src="img/1.jpg" alt="logo">
         </div>
 
-        <form action="" class="w-1/2">
+        <div class="w-1/2 px-16">
             <h2 class="text-2xl font-bold">Login</h2>
-        </form>
+
+            <form action="" class="flex flex-col gap-4">
+              <label for="">Username</label>
+              <input class="p-2 mt-8 rounded-xl border" type="text" name="username" id="" placeholder="Maukkan Username">
+
+              <label for="">Passowrd</label>
+              <input class="p-2 rounded-xl border"  type="password" name="password" id="" placeholder="Masukkan Password">
+              <button class="leading-[20px] font-bold hover:text-white text-black bg-[#F7C151] bg-opacity-[80%] hover:bg-opacity-100 rounded-[50px] gap-[10px] pt-[10px] pr-[24px] pb-[10px] pl-[24px] hover:b">
+                  Login
+              </button>x
+            </form>
+        </div>
       </div>
     </section>
 
