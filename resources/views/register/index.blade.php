@@ -1,43 +1,32 @@
 @extends('layouts.mainLogin')
 
 @section('index')
-  <div class="w-full flex flex-wrap mt-[95px]">
-
-   <div class="w-1/2 hidden md:block bg-[#006633] d-flex justify-center items-center">
-      <img src="" alt="Logo">
+<section class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="flex max-w-3xl p-5 shadow-lg bg-green rounded-2xl">
+    <div class="w-1/2 mt-6">
+      <img src="img/logo-tut.png" alt="Logo">
     </div>
+    <div class="w-full px-16 md:w-1/2 md:px-8"> <h2 class="text-3xl font-bold text-center">Register</h2>
+      <form action="register" class="flex flex-col gap-4" method="post">
+        @csrf
+        <label for="username" class="mt-8">Username</label>
+        <input type="text" name="username" id="username" class="p-2 border rounded-xl" placeholder="Masukkan Username">
 
-    <div class="w-full md:w-1/2 flex flex-col">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="p-2 border rounded-xl" placeholder="Masukkan Password">
 
-      <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-        <p class="text-center text-3xl">Join Us.</p>
+        <label for="password2">Ulang Password</label>
+        <input type="password" name="password2" id="password2" class="p-2 border rounded-xl" placeholder="Masukkan Ulang Password">
 
-        <form action="/register" method="POST" class="flex flex-col pt-3 md:pt-8">
-          @csrf
-          <div class="flex flex-col pt-4">
-            <label for="name" class="text-lg">Username</label>
-            <input type="text" id="username" placeholder="John Smith" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
-          </div>
-
-          <div class="flex flex-col pt-4">
-            <label for="password" class="text-lg">Password</label>
-            <input type="password" id="password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
-          </div>
-
-          <div class="flex flex-col pt-4">
-            <label for="confirm-password" class="text-lg">Confirm Password</label>
-            <input type="password" id="confirm-password" placeholder="Password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
-          </div>
-
-          <input type="submit" value="Register" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8" />
-        </form>
-        <div class="text-center pt-12 pb-12">
-          <p>Sudah Punya Akun? <a href="login" class="underline font-semibold">Log in Disini</a></p>
-        </div>
+        <button type="submit" class="py-2 text-black bg-yellow-400 hover:bg-yellow-500 rounded-xl">
+          Register
+        </button>
+      </form>
+      <div class="pt-12 pb-12 text-center">
+        <p>Sudah punya Akun? <a href="login" class="font-semibold underline">Login here.</a></p>
       </div>
-
     </div>
-
   </div>
+</section>
 
 @endsection
