@@ -2,26 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 
 class RegisterController extends Controller
 {
-    public function index() {
-        return view('register.index');
+
+    public function index(){
+        return view('register.index', [
+
+        ]);
     }
 
-    public function store(Request $request)
+    public function register(Request $request)
     {
-        $validatedData = $request->validate([
-            'username' => 'required|max:255',  // Corrected max length
-            'password' => 'required|min:5|max:255',
-            'password2' => 'required|min:5|max:255|same:password'
+        $validateData = $request->validate([
+            'username' => 'required|min:3|max:225|unique:users',
+            'password' => 'required|min:5|max:225'
         ]);
 
-        User::create($validatedData);
+        $validateData['password'] = Hash::make($validateData['password']);
 
-        // Redirect to a success page or send a success notification
-        return redirect('/login')->with('success', 'Registrasi berhasil!');
+        User::create($validateData);     
+         
+        return redirect('/login')->with('success', 'Registration Successfull');
     }
+  
 }

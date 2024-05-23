@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>Halaman Siswa</title>
 </head>
 <body class="bg-[#ffffff]  font-sans">
 
@@ -14,13 +15,14 @@
 
     <div class="mt-4">
         @yield('profilSiswa')
+        @yield('hasilDataSiswas')
         @yield('isiPesan')
-        @yield('inputDataSiswa')
         @yield('lihatPesan')
-        @yield('hasilData')
     </div>
 
     @include('partials.footer')
-
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>

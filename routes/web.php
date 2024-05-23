@@ -1,56 +1,91 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use Illuminate\Routing\Route as RoutingRoute;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\GuruController;
+use App\Http\Controllers\IsiPesanController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| Di sinilah Anda dapat mendaftarkan rute web untuk aplikasi Anda. Rute-rute
+| ini dimuat oleh RouteServiceProvider dan semuanya akan
+| dihubungkan ke grup middleware "web". Buat sesuatu yang hebat!
 |
 */
 
+// Rute Home
 Route::get('/', function () {
-    return view('siswa.profilSiswa');
+    return view('guest.home');
 });
 
-Route::get('/profilGuru', function () {
-    return view('guru.profilGuru');
+Route::get('/login', function () {
+    return view('login.index');
 });
 
-Route::get('/isiPesan', function () {
-    return view('isiPesan');
+
+// Rute Siswa
+Route::middleware(['auth'])->group(function () {
+    Route::middleware('siswa')->group(function () {
+        Route::get('/profilSiswa', function () {
+            return view('siswa.profilSiswa');
+        });
+
+        Route::get('/hasilDataSiswas', [SiswaController::class, 'index']);
+        Route::resource('/isiPesan', IsiPesanController::class);
+        Route::resource('/lihatPesan', IsiPesanController::class);
+    });
+    
+    Route::middleware('guru')->group(function () {
+        Route::get('/profilGuru', function () {
+            return view('guru.profilGuru');
+        });
+
+        Route::get('/hasilDataGuru', [GuruController::class, 'index']);
+        Route::get('/informasi', function () {
+            return view('guru.informasi');
+        });
+
+        Route::get('/jadwalUas', function () {
+            return view('guru.jadwalUas');
+        });
+
+        Route::get('/jadwalUts', function () {
+            return view('guru.jadwalUts');
+        });
+
+        Route::resource('/isiPesanGuru', IsiPesanController::class);
+        Route::resource('/lihatPesanGuru', IsiPesanController::class);
+    });
 });
 
-Route::get('/inputDataSiswa ', function () {
-    return view('siswa.inputDataSiswa');
+// Layout Admin Utama
+Route::middleware('auth')->get('/mainAdmin', function () {
+    return view('admin.layouts.mainAdmin');
 });
 
-Route::get('/inputDataGuru ', function () {
-    return view('guru.inputDataGuru');
-});
-
-Route::get('/lihatPesan', function () {
-    return view('lihatPesan');
-});
-
-Route::get('/hasilData', function () {
-    return view('hasilData');
-});
-
-Route::get('/hasilDataGuru', function () {
-    return view('guru.hasilDataGuru');
-});
-
-Route::get('/login', [LoginController::class, 'index']);
-
+// Rute Register
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'register']);
 
-Route::post('/register', [RegisterController::class, 'store']);
+// Rute Login
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login.attempt');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Rute Admin dengan Middleware
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::resource('admin/inputDataGuru', GuruController::class);
+    Route::resource('admin/hasilDataGuru', GuruController::class);
+    Route::resource('admin/inputDataSiswa', SiswaController::class);
+    Route::resource('admin/hasilDataSiswa', SiswaController::class);
+    Route::resource('admin/hasilDataSiswa/editSiswa', SiswaController::class);
+});
+
+//guest
+
 

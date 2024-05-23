@@ -1,9 +1,68 @@
 @extends('layouts.mainGuru')
 
 @section('hasilDataGuru')
-    <h1>hallo bang</h1>
 
-    <div class="bg-white pb-[300px]">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path  fill="#006633" fill-opacity="1" d="M0,160L40,144C80,128,160,96,240,106.7C320,117,400,171,480,165.3C560,160,640,96,720,74.7C800,53,880,75,960,112C1040,149,1120,203,1200,208C1280,213,1360,171,1400,149.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+<div class="relative mt-[400px]">
+    <div class="ocean absolute top-0 left-0 w-full h-[500px] z-0">
+        <div class="wave"></div>
+        <div class="wave wave2"></div>
     </div>
+</div>
+
+<div class="relative bg-[#006633] pt-[30px] pb-10 z-10">
+    <div class="overflow-x-auto">
+        <h1 class="text-center text-white mb-5 text-[35px] font-bold">Data Guru</h1>
+        <div class="overflow-x-auto">
+            <table class="w-full max-w-3xl min-w-full leading-normal mb-[200px] bg-white shadow-lg rounded-lg overflow-hidden">
+                <thead>
+                    <tr>
+                        <th class="px-5 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm lg:text-base font-semibold text-gray-700 uppercase tracking-wider">
+                            NIP
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm lg:text-base font-semibold text-gray-700 uppercase tracking-wider">
+                            NAMA
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm lg:text-base font-semibold text-gray-700 uppercase tracking-wider">
+                            JABATAN
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm lg:text-base font-semibold text-gray-700 uppercase tracking-wider">
+                            ALAMAT
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm lg:text-base font-semibold text-gray-700 uppercase tracking-wider">
+                            PENDIDIKAN TERAKHIR
+                        </th>
+                        <th class="px-5 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs md:text-sm lg:text-base font-semibold text-gray-700 uppercase tracking-wider">
+                            MAPEL YANG PERNAH DI AJAR
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    @foreach ($gurus as $guru)
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-5 py-5 border-b border-gray-200 text-xs md:text-sm lg:text-base ">
+                            <span class="block">{{ $guru->nip }}</span>
+                        </td>
+                        <td class="px-5 py-5 border-b border-gray-200 text-xs md:text-sm lg:text-base ">
+                            <span class="block">{{ $guru->nama }}</span>
+                        </td>
+                        <td class="px-5 py-5 border-b border-gray-200 text-xs md:text-sm lg:text-base ">
+                            <span class="block">{{ $guru->jabatan }}</span>
+                        </td>
+                        <td class="px-5 py-5 border-b border-gray-200 text-xs md:text-sm lg:text-base ">
+                            <span class="block">{{ $guru->alamat }}</span>
+                        </td>
+                        <td class="px-5 py-5 border-b border-gray-200 text-xs md:text-sm lg:text-base ">
+                            <span class="block">{{ $guru->pend_akhir }}</span>
+                        </td>
+                        <td class="px-5 py-5 border-b border-gray-200 text-xs md:text-sm lg:text-base ">
+                            <span class="block">{{ $guru->mapel_ajar }}</span>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 @endsection

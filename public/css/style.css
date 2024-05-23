@@ -1,0 +1,132 @@
+html, body { height: 100%; }
+/* body {
+  background: radial-gradient(rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+} */
+
+.ocean {
+  margin-top: 5px;
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.wave {
+  /* margin-top: 370px; */
+  background: url(../img/wave222.svg) repeat-x;
+  position: absolute;
+  width: 6400px;
+  top: -198px;
+  left: 0;
+  height: 198px;
+  transform: translate(0, 0, 0);
+  animation: wave 7s ease infinite;
+  z-index: -2;
+}
+
+.wave:nth-of-type(2) {
+  top: -168px;
+  animation: swell 4s ease infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% { margin-left: 0; }
+  100% { margin-left: -1600px;}
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+      display: block;
+  }
+  .nav-links {
+      display: none;
+  }
+  .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  .burger-menu {
+      display: none;
+  }
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.nav-links a.active p,
+.nav-links a:hover p {
+  color: black;
+  background-color: #F7C151; /* Tailwind CSS 'gray-900' */
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+/* animasi profil*/
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
