@@ -177,7 +177,3 @@
     </div>
 </section>
 @endsection
-
-
-
-
