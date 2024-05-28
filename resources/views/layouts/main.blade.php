@@ -23,6 +23,11 @@
     @include('partials.footer')
     <script>
         feather.replace();
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @extends('admin.layouts.mainAdmin')
 
 @section('inputDataSiswa')
-<form method="POST" action="{{ route('hasilDataSiswa.update', $siswa->id) }}" class="w-full max-w-screen-md mx-auto p-4 bg-white rounded-lg shadow-md">
+<form method="POST" action="{{ route('inputDataSiswa.store') }}" class="w-full max-w-screen-md mx-auto p-4 bg-white rounded-lg shadow-md">
     @csrf
     <h1 class="text-4xl font-bold text-black my-5">FORM SISWA</h1>
 

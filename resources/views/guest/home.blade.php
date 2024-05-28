@@ -7,7 +7,7 @@
     </div>
     
     <div class="max-w-[600px] w-full md:w-auto">
-        <h1 class="text-[25px] text-left md:text-[35px] md:text-center font-bold">SELAMAT DATANG DI SMP AL ABROR</h1>
+        <h1 class="text-[25px] text-left md:text-[35px] lg;text-[42px] md:text-center font-bold">SELAMAT DATANG DI SMP AL ABROR</h1>
         <p class="text-justify text-[15px] mt-[20px] text-slate-500">
             Perkenalkan Nama Saya Ahmad Baihaqi, S, Pd Sebagai kepala sekolah SMP Al-Abror, saya dengan bangga menyambut Anda ke dalam lingkungan pendidikan kami yang penuh semangat dan dedikasi. SMP Al-Abror adalah tempat di mana kami tidak hanya mengajarkan pengetahuan, tetapi juga membentuk karakter siswa-siswa kami agar menjadi individu yang berilmu pengetahuan dan berakhlak mulia.
             <br>
@@ -42,16 +42,16 @@
 </section> 
 
 <section id="visiMisi" class="bg-white w-full h-auto pb-20 md:pb-32 mt-10 md:mt-20">
-    <h1 class="font-bold text-[#006633] text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl px-8 md:px-20 pb-8 md:pb-12">VISI DAN MISI SMP AL ABROR</h1>
+    <h1 class="font-bold text-[#006633] text-center text-[24px] md:text-[32px] lg:text-[42px] px-8 md:px-20 pb-8 md:pb-12">VISI DAN MISI SMP AL ABROR</h1>
 
     <div class="bg-white mx-auto md:mx-0 flex flex-col md:flex-row justify-center items-center">
         <div class="mb-12 md:mb-0 md:mr-8">
-            <h1 class="font-bold text-[#006633] text-center text-xl md:text-2xl pb-4 md:pb-8">VISI</h1>
+            <h1 class="font-bold text-[#006633] text-center text-[24px] md:text-[32px] lg:text-[42px] pb-4 md:pb-8">VISI</h1>
             <p class="text-slate-500 text-center">Membentuk generasi yang berilmu pengetahuan dan berakhlakul karimah.</p>
         </div>
 
         <div class="md:ml-8">
-            <h1 class="font-bold text-[#006633] text-center text-xl md:text-2xl pb-4 md:pb-8">MISI</h1>
+            <h1 class="font-bold text-[#006633] text-center text-[24px] md:text-[32px] lg:text-[42px] pb-4 md:pb-8">MISI</h1>
             <ol class="list-decimal list-inside px-8 md:px-20 text-slate-500">
                 <li class="mb-4">Menyediakan lingkungan belajar yang kondusif dan inspiratif.</li>
                 <li class="mb-4">Mendorong peserta didik untuk mencapai prestasi terbaik dalam akademik dan ekstrakurikuler.</li>
@@ -64,13 +64,13 @@
 
 
 <section id="kurikulum" class="bg-[#006633] w-full h-auto pb-16 md:pb-20 text-white">
-    <h1 class="font-bold pt-16 md:pt-20 text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-8 md:px-20 pb-4 md:pb-8">KURIKULUM</h1>
+    <h1 class="font-bold pt-16 md:pt-20 text-[24px] md:text-[32px] lg:text-[42px] px-8 md:px-20 pb-4 md:pb-8">KURIKULUM</h1>
     <p class="px-8 md:px-20 text-gray-200 text-base md:text-lg lg:text-xl xl:text-2xl">SMP AL-ABROR mengikuti kurikulum nasional atau Kurikulum Merdeka yang dipadu dengan kurikulum keagamaan. Pendekatan ini diterapkan kepada siswa dan siswi dengan harapan dapat mencapai visi sekolah dalam membentuk generasi yang berilmu pengetahuan dan berakhlakul karimah.</p>
 </section>
 
 
 <section id="fasilitas" class="bg-white mt-10 md:mt-20 w-full h-auto pb-16 md:pb-20 font-bold text-[#006633]">
-    <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-8 md:px-20 pb-4 md:pb-8">FASILITAS</h1>
+    <h1 class="text-[24px] md:text-[32px] lg:text-[42px] px-8 md:px-20 pb-4 md:pb-8">FASILITAS</h1>
     <div class="px-8 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="card">
             <img src="img/r_kelas.jpeg" alt="ruang kelas" class="w-full h-auto">
@@ -101,7 +101,7 @@
 </section>
     
 <section id="program" class="bg-[#006633] w-full h-auto pb-16 md:pb-20 text-white">
-    <h1 class="text-center font-bold pt-16 md:pt-20 text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-8 md:px-20 pb-4 md:pb-8">PROGRAM UNGGULAN</h1>
+    <h1 class="text-center font-bold pt-16 md:pt-20 text-[24px] md:text-[32px] lg:text-[42px] px-8 md:px-20 pb-4 md:pb-8">PROGRAM UNGGULAN</h1>
     <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 px-8 md:px-20">
         <div class="mb-8 md:mb-0 md:ml-0 md:mr-10">
             <h2 class="text-2xl md:text-3xl text-center text-yellow-400 pb-3 md:pb-5">Program Akademik Intensif</h2>
@@ -119,7 +119,7 @@
 </section>
 
 <section id="ppdb" class="bg-white w-full h-auto pb-16 md:pb-20 text-[#006633]">
-    <h1 class="text-center font-bold pt-16 md:pt-20 text-3xl md:text-4xl lg:text-5xl xl:text-6xl px-8 md:px-20 pb-4 md:pb-8">PPDB SMP AL ABROR</h1>
+    <h1 class="text-center font-bold pt-16 md:pt-20 text-[24px] md:text-[32px] lg:text-[42px] px-8 md:px-20 pb-4 md:pb-8">PPDB SMP AL ABROR</h1>
     {{-- <h2 class="text-lg md:text-xl px-8 md:px-20 pb-4 md:pb-8">TENTANG PPDB</h2> --}}
     <div class="card flex justify-center border-none">
         <img src="img/PPDB1.jpg" alt="poster" class="w-[40%] h-[50%] max-w-[40%]">
@@ -134,8 +134,8 @@
 </section>
 
 
-<section id="kontak" class="bg-[#006633] mt-10 md:mt-20 w-full h-auto pb-16 md:pb-20 font-bold text-white">
-    <h1 class="text-3xl md:text-4xl pt-16 md:pt-20 lg:text-5xl xl:text-6xl px-8 md:px-20 pb-4 md:pb-8">KONTAK KAMI</h1>
+<section id="kontak" class="bg-[#006633] mt-10 md:mt-20 w-full h-auto  pt-16 md:pt-20 pb-16 md:pb-20 font-bold text-white">
+    <h1 class="text-[24px] md:text-[32px] lg:text-[42px] px-8 md:px-20 pb-4 md:pb-8">KONTAK KAMI</h1>
     <div class="px-8 md:px-20">
         
         <!-- Lokasi -->

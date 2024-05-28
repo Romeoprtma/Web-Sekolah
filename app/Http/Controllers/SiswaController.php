@@ -38,7 +38,7 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nis' => 'required|unique:siswas|max:8',
+            'nis' => 'required|unique:siswas|max:16',
             'nama' => 'required|max:255',
             'alamat' => 'required|max:255',
             'th_ajar' => 'required|max:4',
@@ -56,7 +56,7 @@ class SiswaController extends Controller
     public function show(Siswa $siswa)
     {
         $guru = Siswa::findOrFail($siswa);
-        return view('admin.inputDataSiswa.show', compact('siswa'));
+        return view('admin.inputDataSiswa.show', compact('siswas'));
     }
 
     /**
@@ -64,9 +64,9 @@ class SiswaController extends Controller
      */
     public function edit(Siswa $siswa)
 {
-        $siswas = siswa::where('id', $siswa)->firstOrFail();
-        return view('admin.hasilDataSiswa.editSiswa', compact('siswas'));
+    return view('admin.hasilDataSiswa.editSiswa', compact('siswas'));
 }
+
 
 public function update(Request $request, Siswa $siswa)
 {
@@ -82,8 +82,6 @@ public function update(Request $request, Siswa $siswa)
 
     return redirect()->route('hasilDataSiswa.index')->with('success', 'Data siswa berhasil diperbarui.');
 }
-
-
 
     /**
      * Menghapus sumber daya yang ditentukan dari penyimpanan.

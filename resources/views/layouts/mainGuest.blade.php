@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     @vite('resources/css/app.css')
     <title>Selamat Datang</title>
 </head>
@@ -27,6 +29,33 @@
     @include('partials.footer')
     <script>
         feather.replace();
+
+        function login() {
+      window.location.href = "/login";
+    }
+  
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+    
+  
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+  
+        if (window.innerWidth <= 768) {
+          let menuIcon = document.querySelector('ion-icon[name="close"]');
+          if (menuIcon) {
+            toggleMenu(menuIcon);
+          }
+        }
+      });
+    });
 
     // Tambahkan kode JavaScript untuk menandai tombol navigasi yang aktif
     </script>

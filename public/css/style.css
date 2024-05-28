@@ -1,4 +1,6 @@
-html, body { height: 100%; }
+html, body { height: 100%; 
+overflow-x: hidden;
+}
 /* body {
   background: radial-gradient(rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
 } */
@@ -44,24 +46,7 @@ html, body { height: 100%; }
   }
 }
 
-@media (max-width: 768px) {
-  .burger-menu {
-      display: block;
-  }
-  .nav-links {
-      display: none;
-  }
-  .nav-links.active {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-  }
-}
-@media (min-width: 769px) {
-  .burger-menu {
-      display: none;
-  }
-}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -81,13 +66,6 @@ html, body { height: 100%; }
 }
 .dropdown-content a:hover {
   background-color: #f1f1f1;
-}
-.nav-links a.active p,
-.nav-links a:hover p {
-  color: black;
-  background-color: #F7C151; /* Tailwind CSS 'gray-900' */
-  padding: 8px 16px;
-  border-radius: 30px;
 }
 
 .card {
