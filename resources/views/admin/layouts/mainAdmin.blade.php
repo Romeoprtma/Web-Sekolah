@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <title>halaman guru</title>
+    <title>halaman Admin</title>
 </head>
 <body class="bg-[#ffffff] font-sans">
         @if(session('success'))

@@ -36,11 +36,8 @@
   </ul>
 </nav>
 
+
 <script>
-function toggleMenu() {
-  const navLinks = document.getElementById('nav-links');
-  navLinks.classList.toggle('hidden');
-}
 
 function login() {
   window.location.href = '/login';
