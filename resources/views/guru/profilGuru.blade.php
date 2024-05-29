@@ -2,7 +2,6 @@
 
 @section('profilGuru')
 
-
 <section class="text-center py-[50px] md:py-[100px] px-[20px] md:px-[50px] lg:px-[200px] flex flex-col md:flex-row justify-center items-center">
     <div class="card mb-[20px] md:mb-0 md:mr-[50px] lg:mr-[100px] shadow-lg rounded-lg overflow-hidden h-full w-full max-w-[500px] md:max-w-full">
         <img src="img/k_sekolah.jpg" alt="foto kepala sekolah" class="w-full h-auto object-cover">

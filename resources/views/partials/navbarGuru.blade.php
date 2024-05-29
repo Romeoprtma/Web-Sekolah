@@ -1,47 +1,40 @@
-<nav class="fixed top-0 left-0 right-0 flex flex-col md:flex-row justify-center items-center bg-[#FFFFFF] p-4 z-50">
+<nav class="fixed top-0 left-0 right-0 flex flex-col md:flex-row justify-between bg-white items-center p-4 z-50 shadow-md">
     <div class="flex justify-between w-full md:w-auto items-center">
-        <h1 class="text-[20px] ml-2 md:mr-[200px] w-full md:w-auto text-left md:text-left">
+        <h1 class="text-[20px] ml-2 md:mr-20">
             SMP AL ABROR
         </h1>
         <div class="burger-menu md:hidden cursor-pointer" onclick="toggleMenu()">
             <i data-feather="menu"></i>
         </div>
     </div>
-    <ul id="nav-links" class="nav-links hidden md:flex flex-col md:flex-row justify-center items-center my-[20px] text-[12px] text-slate-500">
+    <ul class="nav-links hidden md:flex flex-col md:flex-row justify-center items-center mt-4 md:mt-0 text-[12px] text-slate-500">
         <!-- Menu items -->
-        <li class="mx-4 my-6 md:my-0 hover:bg-[#F7C151] rounded-[50px] duration-300 hover:text-black">
-            <a href="{{ url('/profilGuru') }}" class="{{ Request::is('/profilGuru') ? 'active' : '' }}">
-                <p class="rounded-md px-4 py-2">
-                    PROFIL
-                </p>
+        <li class="mx-4 my-6 md:my-0 ">
+            <a href="{{ url('/profilGuru') }}" class="{{ Request::is('profilGuru') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+                PROFIL
             </a>
         </li>
-        <li class="mx-4 my-6 md:my-0 hover:bg-[#F7C151] rounded-[50px] duration-300 hover:text-black">
-            <a href="/informasi" class="{{ Request::is('informasi') ? 'active' : '' }}">
-                <p class="rounded-md px-4 py-2">
-                    INFORMASI
-                </p>
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{{ url('/informasi') }}" class="{{ Request::is('informasi') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+                INFORMASI
             </a>
         </li>
-        <li class="mx-4 my-6 md:my-0 hover:bg-[#F7C151] rounded-[50px] duration-300 hover:text-black">
-            <a href="{{ url('/hasilDataGuru') }}" class="{{ Request::is('hasilDataGuru') ? 'active' : '' }}">
-                <p class="rounded-md px-4 py-2">
-                    HASIL DATA
-                </p>
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{{ url('/hasilDataGuru') }}" class="{{ Request::is('hasilDataGuru') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+                HASIL DATA
             </a>
         </li>
-        <li class="mx-4 my-6 md:my-0 hover:bg-[#F7C151] rounded-[50px] duration-300 hover:text-black">
-            <a href="{{ url('/lihatPesanGuru') }}" class="{{ Request::is('lihatPesanGuru') ? 'active' : '' }}">
-                <p class="rounded-md px-4 py-2">
-                    LIHAT PESAN
-                </p>
+        <li class="mx-4 my-6 md:my-0 flex">
+            <a href="{{ url('/lihatPesanGuru') }}" class="{{ Request::is('lihatPesanGuru') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+                LIHAT PESAN
             </a>
         </li>
-        <li class="mt-4 md:mt-0">
-        
-            <button class="md:ml-4 leading-[20px] hover:text-black text-black bg-[#F7C151] bg-opacity-[80%] hover:bg-opacity-100 rounded-[50px] gap-[80px] pt-[10px] pr-[24px] pb-[10px] pl-[24px]" onclick="logout()">
-                LOGOUT
-            </button>
+        <li class="mx-4 my-2 md:my-0">
+            <a href="/login">
+                <button class="leading-5 hover:text-black text-black bg-yellow-400 bg-opacity-80 hover:bg-opacity-100 rounded-full px-6 py-2" onclick="logout()">
+                    LOGOUT
+                </button>
+            </a>
         </li>
     </ul>
 </nav>

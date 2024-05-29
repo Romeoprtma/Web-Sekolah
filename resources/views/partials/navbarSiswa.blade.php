@@ -8,28 +8,28 @@
         </div>
     </div>
     <ul class="nav-links hidden md:flex flex-col md:flex-row justify-center items-center mt-4 md:mt-0 text-[12px] text-slate-500">
-        <li class="mx-4 my-2 md:my-0">
-            <a href="{{ url('/profilSiswa') }}" class="{{ Request::is('profilSiswa') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{{ url('/profilSiswa') }}" class="{{ Request::is('profilSiswa') ? 'bg-yellow-400 text-black' : '' }} flex justify-center items-center hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
                 PROFIL
             </a>
         </li>
-        <li class="mx-4 my-2 md:my-0">
-            <a href="{{ url('/hasilDataSiswas') }}" class="{{ Request::is('hasilDataSiswas') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{{ url('/hasilDataSiswas') }}" class="{{ Request::is('hasilDataSiswas') ? 'bg-yellow-400 text-black' : '' }} flex justify-center items-center hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
                 HASIL DATA
             </a>
         </li>
-        <li class="mx-4 my-2 md:my-0">
-            <a href="{{ url('/isiPesan') }}" class="{{ Request::is('isiPesan') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{{ url('/isiPesan') }}" class="{{ Request::is('isiPesan') ? 'bg-yellow-400 text-black' : '' }} flex justify-center items-center hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
                 ISI PESAN DAN KESAN
             </a>
         </li>
-        <li class="mx-4 my-2 md:my-0">
-            <a href="{{ url('/lihatPesan') }}" class="{{ Request::is('lihatPesan') ? 'bg-yellow-400 text-black' : '' }} hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="{{ url('/lihatPesan') }}" class="{{ Request::is('lihatPesan') ? 'bg-yellow-400 text-black' : '' }} flex justify-center items-center hover:bg-yellow-400 hover:text-black rounded-full px-4 py-2 duration-300">
                 LIHAT PESAN
             </a>
         </li>
-        <li class="mx-4 my-2 md:my-0">
-            <a href="/login">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="/login" class="flex justify-center items-center">
                 <button class="leading-5 hover:text-black text-black bg-yellow-400 bg-opacity-80 hover:bg-opacity-100 rounded-full px-6 py-2" onclick="logout()">
                     LOGOUT
                 </button>
